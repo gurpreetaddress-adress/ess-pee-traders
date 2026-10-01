@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ess Pee Traders, Baramulla — electrical appliance repair and electrical goods, fittings, cables and switchgears." />
+  <title>Ess Pee Traders | Electrical Sales & Repair | Baramulla</title>
+  <style>
+    :root{
+      --navy:#071525; --blue:#0d6efd; --cyan:#16c7ff; --white:#fff;
+      --light:#f5f8fc; --text:#172033; --muted:#667085; --line:#e5eaf1;
+      --green:#19a974; --shadow:0 18px 50px rgba(7,21,37,.12);
+      --radius:20px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,21,37,.95);backdrop-filter:blur(12px);color:#fff}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.05rem}
+    .logo{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--blue));font-weight:900;color:#061321}
+    nav{display:flex;gap:26px;align-items:center}
+    nav a{font-size:.92rem;color:#dbe7f5}
+    nav a:hover{color:#fff}
+    .nav-cta{background:var(--blue);padding:10px 17px;border-radius:10px}
+    .hero{background:radial-gradient(circle at 80% 20%,rgba(22,199,255,.20),transparent 28%),linear-gradient(135deg,#071525 0%,#0b2744 100%);color:#fff;padding:92px 0 86px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);padding:7px 12px;border-radius:999px;font-size:.82rem;color:#ccecff;margin-bottom:20px}
+    h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.02;letter-spacing:-2px;margin-bottom:20px}
+    .hero h1 span{color:var(--cyan)}
+    .hero p{font-size:1.12rem;color:#c9d7e6;max-width:640px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.2s}
+    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{transform:translateY(-2px)}
+    .btn-whatsapp{background:var(--green);color:#fff}
+    .btn-outline{border-color:rgba(255,255,255,.28);color:#fff}
+    .hero-card{background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.15);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+    .hero-card .icon{font-size:3.3rem;margin-bottom:12px}
+    .hero-card h3{font-size:1.45rem;margin-bottom:7px}
+    .hero-card p{font-size:.96rem}
+    .mini-list{display:grid;gap:10px;margin-top:22px}
+    .mini-list div{display:flex;gap:10px;align-items:center;color:#e5f2ff}
+    .mini-list b{color:#fff}
+    section{padding:84px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+    .section-head .tag{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.78rem}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:9px 0 12px}
+    .section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 30px rgba(7,21,37,.05);transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .card-icon{font-size:2rem;margin-bottom:13px}
+    .card h3{margin-bottom:7px}
+    .card p{color:var(--muted);font-size:.94rem}
+    .products{background:var(--light)}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .product{padding:22px;background:#fff;border:1px solid var(--line);border-radius:16px}
+    .product strong{display:block;margin-bottom:4px}
+    .product span{font-size:.88rem;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+    .about-panel{background:linear-gradient(145deg,#0a2037,#0c4162);color:#fff;border-radius:28px;padding:38px;min-height:320px;display:flex;flex-direction:column;justify-content:center}
+    .about-panel .big{font-size:4.2rem;font-weight:900;line-height:1;color:var(--cyan)}
+    .about-panel p{color:#cbddeb;margin-top:12px}
+    .about-copy h2{font-size:2.5rem;line-height:1.1;margin-bottom:16px}
+    .about-copy p{color:var(--muted);margin-bottom:18px}
+    .ticks{display:grid;gap:10px}
+    .ticks div{display:flex;gap:10px;font-weight:700}
+    .ticks span{color:var(--green)}
+    .eco{background:#eefaf5}
+    .eco-box{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:#fff;border:1px solid #ccefe0;padding:28px;border-radius:22px}
+    .eco-icon{font-size:3rem}
+    .eco h3{font-size:1.5rem;margin-bottom:4px}
+    .eco p{color:var(--muted)}
+    .contact{background:var(--navy);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}
+    .contact h2{font-size:2.8rem;line-height:1.1;margin-bottom:15px}
+    .contact p{color:#c9d7e6}
+    .contact-box{margin-top:26px;display:grid;gap:13px}
+    .contact-item{display:flex;gap:13px;align-items:flex-start}
+    .contact-item .ci{font-size:1.3rem}
+    .contact-item small{display:block;color:#94a9bd}
+    .map-card{border-radius:24px;min-height:310px;background:linear-gradient(135deg,#123957,#0b2238);border:1px solid rgba(255,255,255,.12);padding:30px;display:flex;flex-direction:column;justify-content:center}
+    .map-card h3{font-size:1.45rem;margin-bottom:7px}
+    footer{background:#04101d;color:#8fa3b7;text-align:center;padding:24px 0;font-size:.88rem}
+    .mobile-menu{display:none}
+    @media(max-width:850px){
+      nav{display:none}.mobile-menu{display:block;color:#fff;font-size:1.5rem}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .hero{padding-top:65px}
+    }
+    @media(max-width:560px){
+      .nav{height:68px}.brand span{font-size:.94rem}
+      section{padding:64px 0}
+      .cards,.product-grid{grid-template-columns:1fr}
+      h1{letter-spacing:-1px}
+      .hero-card{padding:23px}
+      .about-panel{min-height:250px}
+      .contact h2{font-size:2.25rem}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Ess Pee Traders home">
+      <div class="logo">EP</div>
+      <span>ESS PEE TRADERS</span>
+    </a>
+    <nav>
+      <a href="#services">Repairs</a>
+      <a href="#products">Electrical Items</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+    <div class="mobile-menu">☰</div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">⚡ Electrical Sales & Appliance Repair • Baramulla</div>
+        <h1>Powering homes.<br><span>Repairing what matters.</span></h1>
+        <p>Ess Pee Traders provides dependable electrical appliance repair along with electrical goods, cables, switchgears, fittings and house-fitting items in Baramulla.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#services">Explore Repair Services</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/919622581396" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="icon">🔧⚡</div>
+        <h3>Repair & Electrical Solutions</h3>
+        <p>From everyday appliances to electrical fittings, get sales and repair support under one roof.</p>
+        <div class="mini-list">
+          <div>✓ <b>30+ years of market presence</b></div>
+          <div>✓ Experienced appliance repair</div>
+          <div>✓ Electrical goods & fittings</div>
+          <div>✓ Fitters available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="tag">Repair Services</div>
+        <h2>Give your appliances a second life.</h2>
+        <p>Practical repair services for common household electrical appliances and equipment.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🍚</div><h3>Rice Cookers</h3><p>Repair and servicing for common rice-cooker electrical faults.</p></article>
+        <article class="card"><div class="card-icon">☕</div><h3>Electric Kettles</h3><p>Help with heating, power and electrical connection issues.</p></article>
+        <article class="card"><div class="card-icon">🍳</div><h3>Induction Stoves</h3><p>Electrical troubleshooting and repair for induction appliances.</p></article>
+        <article class="card"><div class="card-icon">🔋</div><h3>Inverters</h3><p>Repair assistance for inverter-related electrical problems.</p></article>
+        <article class="card"><div class="card-icon">🔦</div><h3>Torches</h3><p>Repair support for rechargeable and electrical torch issues.</p></article>
+        <article class="card"><div class="card-icon">🛠️</div><h3>General Appliance Repair</h3><p>Bring in your electrical appliance for assessment and repair.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-head">
+        <div class="tag">Electrical Shop</div>
+        <h2>Electrical items for your next project.</h2>
+        <p>Shop for everyday electrical goods, house fittings and essential electrical accessories.</p>
+      </div>
+      <div class="product-grid">
+        <div class="product"><strong>Electrical Goods</strong><span>Everyday electrical essentials</span></div>
+        <div class="product"><strong>Cables</strong><span>Electrical cables and accessories</span></div>
+        <div class="product"><strong>Switchgears</strong><span>Switches, protection & control</span></div>
+        <div class="product"><strong>House Fittings</strong><span>Fittings for home electrical work</span></div>
+        <div class="product"><strong>Switches & Sockets</strong><span>Practical electrical fittings</span></div>
+        <div class="product"><strong>Electrical Accessories</strong><span>Useful installation accessories</span></div>
+        <div class="product"><strong>Lighting Items</strong><span>Lighting-related electrical products</span></div>
+        <div class="product"><strong>More Available</strong><span>Ask us about your requirement</span></div>
+      </div>
+      <div style="text-align:center;margin-top:30px">
+        <a class="btn btn-primary" href="https://wa.me/919622581396?text=Hello%20Ess%20Pee%20Traders%2C%20I%20want%20to%20enquire%20about%20electrical%20items." target="_blank" rel="noopener">Ask About an Item on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-panel">
+        <div class="big">30+</div>
+        <h3>Years of Market Presence</h3>
+        <p>Serving customers with electrical products and practical repair solutions.</p>
+      </div>
+      <div class="about-copy">
+        <div class="tag" style="color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.78rem">Why Ess Pee Traders</div>
+        <h2>A local electrical partner you can rely on.</h2>
+        <p>Whether you need an appliance repaired or electrical items for a new installation, Ess Pee Traders brings sales and repair services together in one place.</p>
+        <div class="ticks">
+          <div><span>✓</span> Appliance repair support</div>
+          <div><span>✓</span> Electrical goods and fittings</div>
+          <div><span>✓</span> Fitters available</div>
+          <div><span>✓</span> Convenient Baramulla location</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="eco">
+    <div class="container">
+      <div class="eco-box">
+        <div class="eco-icon">🌱</div>
+        <div>
+          <h3>Repair More. Waste Less.</h3>
+          <p>Giving appliances a second life can help reduce unnecessary waste. Let’s work towards <strong>a greener tomorrow with more repairs and less pollution.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <div class="tag" style="color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.78rem">Visit / Contact</div>
+        <h2>Need a repair or electrical item?</h2>
+        <p>Contact Ess Pee Traders and tell us what you need.</p>
+        <div class="contact-box">
+          <div class="contact-item"><div class="ci">📍</div><div><small>Address</small><strong>Jadeed Road, Baramulla</strong></div></div>
+          <div class="contact-item"><div class="ci">📱</div><div><small>WhatsApp / Phone</small><strong>9622581396</strong></div></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/919622581396" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a class="btn btn-outline" href="tel:+919622581396">Call Now</a>
+        </div>
+      </div>
+      <div class="map-card">
+        <div style="font-size:2.8rem">📍</div>
+        <h3>Ess Pee Traders</h3>
+        <p>Jadeed Road, Baramulla</p>
+        <a class="btn btn-primary" style="margin-top:20px;max-width:190px" href="https://www.google.com/maps/search/?api=1&query=Ess%20Pee%20Traders%20Jadeed%20Road%20Baramulla" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Ess Pee Traders, Baramulla. Electrical Sales & Appliance Repair.</div>
+</footer>
+
+</body>
+</html>
